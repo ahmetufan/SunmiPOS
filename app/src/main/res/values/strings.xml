@@ -1,0 +1,103 @@
+<resources>
+    <string name="app_name">SunmiPost</string>
+    <string name="success">Success</string>
+
+    <string name="connect_loading">connecting to sdk</string>
+    <string name="connect_success">connect to sdk success</string>
+    <string name="connect_fail">connect to sdk fail, please exit to reconnect</string>
+
+    <string name="basic">Basic</string>
+    <string name="read_card">ReadCard</string>
+    <string name="pin_pad">PinPad</string>
+    <string name="security">Security</string>
+    <string name="emv">EMV</string>
+    <string name="scan">Scan</string>
+    <string name="version">Version</string>
+    <string name="other">Other</string>
+    <string name="etc">ETC</string>
+
+
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    <string name="card_test_mag">Magnetic card test</string>
+    <string name="card_test_mag_enc">Magnetic card test(Encrypt track data)</string>
+    <string name="card_test_ic">IC card test</string>
+    <string name="card_test_m1">Mifare card test</string>
+    <string name="card_test_m1_psame">Mifare card test(Authenticated by SAM AV2)</string>
+    <string name="card_test_sam">SAM card test</string>
+    <string name="card_test_MIFARE_Ultralight">MiFare Ultralight C card test</string>
+    <string name="card_test_MIFARE_Ultralight_ev1">MiFare Ultralight ev1 card test</string>
+    <string name="card_test_FELICA">FeLiCa card test</string>
+    <string name="card_test_apdu">Normal APDU test</string>
+    <string name="card_test_transmit_apdu">Transmit APDU test</string>
+    <string name="card_test_mifare_plus">Mifare Plus card test</string>>
+    <string name="card_test_sle4442_4428">SLE4442/4428 card test</string>
+    <string name="card_test_at24c">AT24Cxxx card test</string>
+    <string name="card_test_at88scxx">AT88SCxxx card test</string>
+
+
+    <string name="card_total">Total：</string>
+    <string name="card_success">Pass：</string>
+    <string name="card_fail">Fail：</string>
+    <string name="card_track1">Track1：</string>
+    <string name="card_track2">Track2：</string>
+    <string name="card_track3">Track3：</string>
+    <string name="card_pan">PAN:</string>
+    <string name="card_service_code">Service code:</string>
+    <string name="card_check_ic_card">Find IC card</string>
+    <string name="card_check_rf_card">Find RF card</string>
+    <string name="card_check_card_error">Check card error</string>
+    <string name="card_uuid">UUID：</string>
+    <string name="card_ats">ATS:</string>
+    <string name="card_atr">ATR：</string>
+    <string name="card_NO">Card NO：</string>
+    <string name="card_expire_date">Expire Date：</string>
+    <string name="cardholder_name">Cardholder Name：</string>
+    <string name="print">Print</string>
+    <string name="magnetic_card_test_encrypt_track_data">Magnetic Card Test (Encrypt track data)</string>
+    <string name="print_text">Print Text</string>
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    <string name="screen_off_print">Screen off print</string>
+    <string name="print_text_content">Print Text Content</string>
+    <string name="print_text_size">Print Text Size</string>
+    <string name="e_signature">E-signature</string>
+    <string name="clear">Clear</string>
+    <string name="screen_rotation">Screen Rotation</string>
+    <string name="up">UP</string>
+    <string name="down">DOWN</string>
+    <string name="left">LEFT</string>
+    <string name="right">RIGHT</string>
+
+    <string name="text_mock">I LOVE SUNMI!I LOVE SUNMI!I LOVE SUNMI!I LOVE SUNMI!I LOVE SUNMI!I LOVE SUNMI!I LOVE SUNMI!I LOVE SUNMI!I LOVE SUNMI!I LOVE SUNMI!I LOVE SUNMI!I LOVE SUNMI!I LOVE SUNMI!I LOVE SUNMI!I LOVE SUNMI!</string>
+    <string name="set_date_time">Set Date&amp;Time</string>
+
+    <string name="text_mock1">VBT YAZILIM</string>
+    <string name="print_repeat_time">Repeat times</string>
+    <string name="print_screen_off_wait_time">Waiting time after screen off(Unit:s)</string>
+    <string name="print_screen_off_interval">Interval time between 2 print(Unit:s)</string>
+    <string name="device_comm">Device Communication</string>
+    <string name="device_shutdown">Shutdown</string>
+    <string name="device_reboot">Reboot</string>
+    <!-- 0-USB，1-串口，2-wifi，3-蓝牙 -->
+    <string name="usb_comm">USB</string>
+    <string name="serial_port_comm">Serial Port</string>
+    <string name="wifi_comm">WIFI</string>
+    <string name="bluetooth_comm">Bluetooth</string>
+    <string name="comm_type">Communication Type</string>
+    <string name="check">Check</string>
+    <string name="send_data">Send Data</string>
+    <string name="out_log">Output Log</string>
+    <string name="send">send</string>
+    <string name="camera_scanner">Camera Scanner</string>
+
+    <string name="error_scan">Scan App is not installed, please upgrade ROM</string>
+
+    <string name="other_version_sn">Device SN：</string>
+    <string name="other_version_rom">Rom Version：</string>
+    <string name="other_version_device">Device Model：</string>
+    <string name="other_version_demo">SunmiSDKTestDemo Version：</string>
+    <string name="other_version_service">SunmiPayHardwareService Version：</string>
+    <string name="other_scan_result">Scan Result</string>
+
+</resources>
