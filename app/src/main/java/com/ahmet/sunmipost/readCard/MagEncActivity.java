@@ -25,6 +25,9 @@ import java.util.Locale;
 public class MagEncActivity extends BaseAppCompatActivity {
     private static final String TAG = Constant.TAG;
     private static final int TDK_INDEX = 19;
+    
+    
+
 
     private MaterialButton mBtnTotal;
     private MaterialButton mBtnSuccess;

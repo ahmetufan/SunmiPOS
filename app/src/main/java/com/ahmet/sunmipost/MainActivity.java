@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.ahmet.sunmipost.print.PrintActivity;
+import com.ahmet.sunmipost.process.EmvActivity;
 import com.ahmet.sunmipost.readCard.CardActivity;
 import com.ahmet.sunmipost.scan.ScanActivity;
 import com.ahmet.sunmipost.utils.Constant;
@@ -44,6 +45,8 @@ public class MainActivity extends BaseAppCompatActivity {
         findViewById(R.id.card_view_print).setOnClickListener(this);
         // Scan
         findViewById(R.id.card_view_scan).setOnClickListener(this);
+        // IC/NFC Process
+        findViewById(R.id.card_view_emv).setOnClickListener(this);
 
     }
 
@@ -67,6 +70,10 @@ public class MainActivity extends BaseAppCompatActivity {
 
             case R.id.card_view_scan:
                 openActivity(ScanActivity.class);
+                break;
+
+            case R.id.card_view_emv:
+                openActivity(EmvActivity.class);
                 break;
         }
     }

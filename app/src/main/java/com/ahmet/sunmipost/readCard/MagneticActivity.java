@@ -21,6 +21,7 @@ import java.util.Locale;
 
 public class MagneticActivity extends BaseAppCompatActivity {
 
+
     private static final String TAG = "MagActivity";
 
     private MaterialButton mBtnTotal;

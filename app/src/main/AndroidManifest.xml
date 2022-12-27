@@ -21,11 +21,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SunmiPost">
-        <activity android:name=".readCard.MagneticActivity"></activity>
+        <activity
+            android:name=".process.ICProcessActivity"
+            android:exported="true" />
+        <activity
+            android:name=".process.MagProcessActivity"
+            android:exported="true" />
+        <activity
+            android:name=".process.EmvActivity"
+            android:exported="true" />
+        <activity
+            android:name=".readCard.MagneticActivity"
+            android:exported="true" />
         <activity
             android:name=".scan.ScanResultActivity"
             android:exported="true" />
-        <activity android:name=".scan.ScanActivity" />
+        <activity
+            android:name=".scan.ScanActivity"
+            android:exported="true" />
         <activity
             android:name=".print.PrintTextActivity"
             android:exported="true" />

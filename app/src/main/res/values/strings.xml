@@ -16,6 +16,17 @@
     <string name="other">Other</string>
     <string name="etc">ETC</string>
 
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="all_open">All Open</string>
+    <string name="all_close">All Close</string>
+    <string name="amount">Amount (cent)</string>
+    <string name="fail">Fail</string>
+    <string name="loading">Loading</string>
+    <string name="handling">Processing</string>
+    <string name="requesting">Requesting</string>
 
 
     ////////////////////////////////////////////////////////////////////////////////////////////////
@@ -99,5 +110,51 @@
     <string name="other_version_demo">SunmiSDKTestDemo Version：</string>
     <string name="other_version_service">SunmiPayHardwareService Version：</string>
     <string name="other_scan_result">Scan Result</string>
+    <string name="ic_nfc_process">IC / NFC Process</string>
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    <string name="emv_swing_card_mag">Please swipe card</string>
+    <string name="emv_swing_card_ic">Please swipe card and insert card</string>
+    <string name="emv_confirm_card_no">Confirm card number</string>
+    <string name="emv_confirm_cert">Confirm certificate information</string>
+    <string name="emv_card_no_error">Get Card info error</string>
+    <string name="emv_app_select">Please select app</string>
+    <string name="emv_ic_process">NFC/IC Process</string>
+    <string name="emv_mag_process">Magnetic Process</string>
+    <string name="emv_read_rupay_card">Read Rupay card</string>
+    <string name="emv_other">EMV Others</string>
+    <string name="emv_query_ec_balance">QueryECBalance</string>
+    <string name="emv_remove_card">Please remove card&#8230;</string>
+
+    <string name="card_sector">Sector (0&#8211;15)</string>
+    <string name="card_block">Block (0&#8211;2)</string>
+    <string name="card_key_A">KeyA</string>
+    <string name="card_key_B">KeyB</string>
+    <string name="card_block_0">Block0</string>
+    <string name="card_block_1">Block1</string>
+    <string name="card_block_2">Block2</string>
+    <string name="card_balance_symbol">Balance:</string>
+    <string name="card_cost">Cost</string>
+    <string name="card_read">Read</string>
+    <string name="card_write">Write</string>
+    <string name="card_init">Init</string>
+    <string name="card_balance">Balance</string>
+    <string name="card_value_add">Add</string>
+    <string name="card_value_reduce">Reduce</string>
+    <string name="card_value_restore">Restore</string>
+    <string name="card_sector_hint">Please input correct sector(0&#8211;15)</string>
+    <string name="card_block_hint">Please input correct block(0&#8211;2)</string>
+    <string name="card_key_hint">Please input correct key</string>
+    <string name="card_cost_hint">Please input correct cost amount</string>
+    <string name="card_auth_success">Auth success</string>
+    <string name="card_auth_fail">Auth fail</string>
+    <string name="card_wallet_init_success">Init wallet format success</string>
+    <string name="card_wallet_init_fail">Init wallet format fail</string>
+    <string name="card_wallet_balance_success">Get wallet balance success</string>
+    <string name="card_wallet_balance_fail">Get wallet balance fail</string>
+    <string name="card_wallet_add_value_success">Increase wallet value success</string>
+    <string name="card_wallet_add_value_fail">Increase wallet value fail</string>
+    <string name="card_wallet_dec_value_success">Decrease wallet value success</string>
+    <string name="card_wallet_dec_value_fail">Decrease wallet value fail</string>
 
 </resources>
