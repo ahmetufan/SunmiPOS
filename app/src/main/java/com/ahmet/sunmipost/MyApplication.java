@@ -41,7 +41,7 @@ public class MyApplication extends Application {
     public static EMVOptV2 mEMVOptV2;               // EMV Operasyon Modülünü Alın
     public static TaxOptV2 mTaxOptV2;               // Vergi kontrolü operasyon modülünü edinin
     public static ETCOptV2 mETCOptV2;               // ETC operasyon modülünü edinin
-    public static SunmiPrinterService sunmiPrinterService;
+    public static SunmiPrinterService sunmiPrinterService;  // Printer modülü
     public static IScanInterface scanInterface;
 
 
@@ -64,22 +64,22 @@ public class MyApplication extends Application {
         Resources resources = MyApplication.getContext().getResources();
         DisplayMetrics dm = resources.getDisplayMetrics();
         Configuration config = resources.getConfiguration();
+
         int showLanguage = CacheHelper.getCurrentLanguage();
+
         if (showLanguage == Constant.LANGUAGE_AUTO) {
             LogUtil.e(Constant.TAG, config.locale.getCountry() + "---Bu sistem dili");
             config.locale = Resources.getSystem().getConfiguration().locale;
-        } else if (showLanguage == Constant.LANGUAGE_ZH_CN) {
-            LogUtil.e(Constant.TAG, "这是中文");
-            config.locale = Locale.SIMPLIFIED_CHINESE;
+        } else if (showLanguage == Constant.LANGUAGE_TR_TR) {
+            LogUtil.e(Constant.TAG, "TÜRKÇE");
+            config.locale = Locale.getDefault();
         } else if (showLanguage == Constant.LANGUAGE_EN_US) {
-            LogUtil.e(Constant.TAG, "这是英文");
+            LogUtil.e(Constant.TAG, "ENGLİSH");
             config.locale = Locale.ENGLISH;
-        } else if (showLanguage == Constant.LANGUAGE_JA_JP) {
-            LogUtil.e(Constant.TAG, "这是日文");
-            config.locale = Locale.JAPAN;
         }
         resources.updateConfiguration(config, dm);
     }
+
 
     @Override
     public void onConfigurationChanged(@NonNull Configuration newConfig) {

@@ -56,7 +56,7 @@
     <string name="card_pan">PAN:</string>
     <string name="card_service_code">Service code:</string>
     <string name="card_check_ic_card">Find IC card</string>
-    <string name="card_check_rf_card">Find RF card</string>
+    <string name="card_check_rf_card">Find NFC card</string>
     <string name="card_check_card_error">Check card error</string>
     <string name="card_uuid">UUID：</string>
     <string name="card_ats">ATS:</string>
@@ -113,6 +113,13 @@
     <string name="ic_nfc_process">IC / NFC Process</string>
 
     ////////////////////////////////////////////////////////////////////////////////////////////////
+    <string name="other_language">Language</string>
+    <string name="other_language_auto">Auto</string>
+    <string name="other_language_tr_tr" translatable="false">Turkish</string>
+    <string name="other_language_en_us">English</string>
+    <string name="other_language_ja_jp" translatable="false">日本語</string>
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////
     <string name="emv_swing_card_mag">Please swipe card</string>
     <string name="emv_swing_card_ic">Please swipe card and insert card</string>
     <string name="emv_confirm_card_no">Confirm card number</string>
@@ -156,5 +163,17 @@
     <string name="card_wallet_add_value_fail">Increase wallet value fail</string>
     <string name="card_wallet_dec_value_success">Decrease wallet value success</string>
     <string name="card_wallet_dec_value_fail">Decrease wallet value fail</string>
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+
+    <string name="basic_get_sys_param">Get system parameters</string>
+    <string name="basic_set_sys_param">Set system parameters</string>
+    <string name="basic_buzzer">Buzzer</string>
+    <string name="basic_led">LED lamp control</string>
+    <string name="basic_led_rb_on_new">Red/Blue on(New)</string>
+    <string name="basic_led_yg_on_new">Yellow/Green on(New)</string>
+    <string name="basic_led_all_on_new">All on(New)</string>
+    <string name="basic_led_all_off_new">All off(New)</string>
+    <string name="basic_screen_mode">Set screen exclusive</string>
 
 </resources>

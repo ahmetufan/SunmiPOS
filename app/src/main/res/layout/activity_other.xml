@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".readCard.CardActivity">
+    tools:context=".other.OtherActivity">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -19,7 +19,7 @@
         app:titleTextAppearance="@style/Toolbar.TitleText" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/magneticTestConstraint"
+        android:id="@+id/languageConstraint"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="21dp"
@@ -29,12 +29,12 @@
         app:layout_constraintTop_toBottomOf="@id/toolbar">
 
         <TextView
-            android:id="@+id/magneticCardTestTextview"
+            android:id="@+id/languageTextview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
             android:padding="8dp"
-            android:text="@string/magnetic_card_test_encrypt_track_data"
+            android:text="@string/other_language"
             android:textColor="@color/black"
             android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -46,28 +46,29 @@
             android:layout_height="35dp"
             android:layout_marginEnd="20dp"
             android:src="@drawable/ic_click"
-            app:layout_constraintBottom_toBottomOf="@+id/magneticCardTestTextview"
+            app:layout_constraintBottom_toBottomOf="@+id/languageTextview"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/magneticCardTestTextview" />
+            app:layout_constraintTop_toTopOf="@+id/languageTextview" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/magneticConstraint"
+        android:id="@+id/e_signatureConstraint"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="21dp"
         android:padding="5dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/magneticTestConstraint">
+        app:layout_constraintTop_toBottomOf="@id/languageConstraint">
 
         <TextView
-            android:id="@+id/magneticTextview"
+            android:id="@+id/e_signatureTextview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
             android:padding="8dp"
-            android:text="@string/card_test_mag"
+            android:text="@string/e_signature"
             android:textColor="@color/black"
             android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -79,28 +80,29 @@
             android:layout_height="35dp"
             android:layout_marginEnd="20dp"
             android:src="@drawable/ic_click"
-            app:layout_constraintBottom_toBottomOf="@+id/magneticTextview"
+            app:layout_constraintBottom_toBottomOf="@+id/e_signatureTextview"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/magneticTextview" />
+            app:layout_constraintTop_toTopOf="@+id/e_signatureTextview" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/iCCardConstraint"
+        android:id="@+id/setDateTimeConstraint"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="21dp"
         android:padding="5dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/magneticConstraint">
+        app:layout_constraintTop_toBottomOf="@id/e_signatureConstraint">
 
         <TextView
-            android:id="@+id/iCCardTextview"
+            android:id="@+id/setDateTimeTextview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
             android:padding="8dp"
-            android:text="@string/card_test_ic"
+            android:text="@string/set_date_time"
             android:textColor="@color/black"
             android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -112,12 +114,10 @@
             android:layout_height="35dp"
             android:layout_marginEnd="20dp"
             android:src="@drawable/ic_click"
-            app:layout_constraintBottom_toBottomOf="@+id/iCCardTextview"
+            app:layout_constraintBottom_toBottomOf="@+id/setDateTimeTextview"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/iCCardTextview" />
+            app:layout_constraintTop_toTopOf="@+id/setDateTimeTextview" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

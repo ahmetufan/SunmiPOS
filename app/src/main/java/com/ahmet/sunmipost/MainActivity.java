@@ -7,6 +7,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.ahmet.sunmipost.basic.BasicActivity;
+import com.ahmet.sunmipost.other.OtherActivity;
 import com.ahmet.sunmipost.print.PrintActivity;
 import com.ahmet.sunmipost.process.EmvActivity;
 import com.ahmet.sunmipost.readCard.CardActivity;
@@ -47,7 +49,10 @@ public class MainActivity extends BaseAppCompatActivity {
         findViewById(R.id.card_view_scan).setOnClickListener(this);
         // IC/NFC Process
         findViewById(R.id.card_view_emv).setOnClickListener(this);
-
+        // Other Language
+        findViewById(R.id.card_view_other).setOnClickListener(this);
+        // Basic Activity - Led Lamb
+        findViewById(R.id.basic_view_other).setOnClickListener(this);
     }
 
     @Override
@@ -74,6 +79,14 @@ public class MainActivity extends BaseAppCompatActivity {
 
             case R.id.card_view_emv:
                 openActivity(EmvActivity.class);
+                break;
+
+            case R.id.card_view_other:
+                openActivity(OtherActivity.class);
+                break;
+
+            case R.id.basic_view_other:
+                openActivity(BasicActivity.class);
                 break;
         }
     }

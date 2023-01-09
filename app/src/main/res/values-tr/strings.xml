@@ -1,0 +1,178 @@
+<resources>
+
+    <string name="app_name">SunmiPost</string>
+    <string name="success">Başarılı</string>
+
+    <string name="connect_loading">Sdk bağlantısı kuruluyor</string>
+    <string name="connect_success">Sdk bağlantısı başarılı</string>
+    <string name="connect_fail">Sdk bağlantısı başarısız, lütfen yeniden bağlanmak için çıkış yapın</string>
+
+    <string name="basic">Temel</string>
+    <string name="read_card">Kart Okuma</string>
+    <string name="pin_pad">PinPad</string>
+    <string name="security">Güvenlik</string>
+    <string name="emv">EMV</string>
+    <string name="scan">Tarama</string>
+    <string name="version">Versiyon</string>
+    <string name="other">Diğer</string>
+    <string name="etc">ETC</string>
+
+    <string name="ok">Tamam</string>
+    <string name="cancel">İptal</string>
+    <string name="open">Aç</string>
+    <string name="close">Kapalı</string>
+    <string name="all_open">Hepsi Açık</string>
+    <string name="all_close">Hepsi Kapalı</string>
+    <string name="amount">Miktar (cent)</string>
+    <string name="fail">Başarısız</string>
+    <string name="loading">Yükleniyor</string>
+    <string name="handling">İşleniyor</string>
+    <string name="requesting">Talep Ediliyor</string>
+
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    <string name="card_test_mag">Manyetik kart testi</string>
+    <string name="card_test_mag_enc">Manyetik kart testi (İz verilerini şifrele)</string>
+    <string name="card_test_ic">IC kart testi</string>
+    <string name="card_test_m1">Mifare kart testi</string>
+    <string name="card_test_m1_psame">Mifare kart testi (SAM AV2 tarafından doğrulanmıştır)</string>
+    <string name="card_test_sam">SAM kart testi</string>
+    <string name="card_test_MIFARE_Ultralight">MiFare Ultralight C kart testi</string>
+    <string name="card_test_MIFARE_Ultralight_ev1">MiFare Ultralight ev1 kart testi</string>
+    <string name="card_test_FELICA">FeLiCa kart testi</string>
+    <string name="card_test_apdu">Normal APDU testi</string>
+    <string name="card_test_transmit_apdu">APDU testini iletin</string>
+    <string name="card_test_mifare_plus">Mifare Plus kart testi</string>>
+    <string name="card_test_sle4442_4428">SLE4442/4428 kart testi</string>
+    <string name="card_test_at24c">AT24Cxxx kart testi</string>
+    <string name="card_test_at88scxx">AT88SCxxx kart testi</string>
+
+
+    <string name="card_total">Toplam：</string>
+    <string name="card_success">Geçmek：</string>
+    <string name="card_fail">Başarısız：</string>
+    <string name="card_track1">1. Parça：</string>
+    <string name="card_track2">2. Parça：</string>
+    <string name="card_track3">3. Parça：</string>
+    <string name="card_pan">PAN:</string>
+    <string name="card_service_code">Servis kodu:</string>
+    <string name="card_check_ic_card">IC kartı bul</string>
+    <string name="card_check_rf_card">RF kartı bul</string>
+    <string name="card_check_card_error">Kart kontrol hatası</string>
+    <string name="card_uuid">UUID：</string>
+    <string name="card_ats">ATS:</string>
+    <string name="card_atr">ATR：</string>
+    <string name="card_NO">Kart NO:</string>
+    <string name="card_expire_date">Son kullanma tarihi：</string>
+    <string name="cardholder_name">Kart Sahibinin Adı:</string>
+    <string name="print">Yazdır</string>
+    <string name="magnetic_card_test_encrypt_track_data">Manyetik Kart Testi (İz verilerini şifrele)</string>
+    <string name="print_text">Metni Yazdır</string>
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    <string name="screen_off_print">Ekran kapalı baskı</string>
+    <string name="print_text_content">Metin İçeriğini Yazdır</string>
+    <string name="print_text_size">Metin Boyutunu Yazdır</string>
+    <string name="e_signature">E-imza</string>
+    <string name="clear">Temizle</string>
+    <string name="screen_rotation">Ekran Döndürme</string>
+    <string name="up">YUKARI</string>
+    <string name="down">AŞAĞI</string>
+    <string name="left">SOL</string>
+    <string name="right">SAĞ</string>
+
+    <string name="text_mock">VBT YAZILIM -- VBT YAZILIM -- VBT YAZILIM</string>
+    <string name="set_date_time">Set Date&amp;Time</string>
+
+    <string name="text_mock1">VBT YAZILIM</string>
+    <string name="print_repeat_time">Tekrar süreleri</string>
+    <string name="print_screen_off_wait_time">Ekran kapandıktan sonra bekleme süresi(Birim:saniye)</string>
+    <string name="print_screen_off_interval">2 baskı arasındaki aralık süresi(Birim:saniye)</string>
+    <string name="device_comm">Cihaz İletişimi</string>
+    <string name="device_shutdown">Kapat</string>
+    <string name="device_reboot">Yeniden başlat</string>
+    <!-- 0-USB，1-串口，2-wifi，3-蓝牙 -->
+    <string name="usb_comm">USB</string>
+    <string name="serial_port_comm">Serial Port</string>
+    <string name="wifi_comm">WIFI</string>
+    <string name="bluetooth_comm">Bluetooth</string>
+    <string name="comm_type">İletişim Türü</string>
+    <string name="check">Kontrol et</string>
+    <string name="send_data">Veri Gönder</string>
+    <string name="out_log">Çıktı Günlüğü</string>
+    <string name="send">Gönder</string>
+    <string name="camera_scanner">Kamera Tarayıcı</string>
+
+    <string name="error_scan">Tarama Uygulaması yüklü değil, lütfen ROM yükseltin</string>
+
+    <string name="other_version_sn">Cihaz SN：</string>
+    <string name="other_version_rom">Rom Versiyon：</string>
+    <string name="other_version_device">Cihaz Model：</string>
+    <string name="other_version_demo">SunmiPos Versiyon：</string>
+    <string name="other_version_service">SunmiPayHardwareService Versiyon：</string>
+    <string name="other_scan_result">Scan Result</string>
+    <string name="ic_nfc_process">IC / NFC İşlemi</string>
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    <string name="other_language">Dil</string>
+    <string name="other_language_auto">Otomatik</string>
+    <string name="other_language_tr_tr" translatable="false">Türkçe</string>
+    <string name="other_language_en_us">İngilizce</string>
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    <string name="emv_swing_card_mag">Lütfen kartı kaydırın</string>
+    <string name="emv_swing_card_ic">Lütfen kartı kaydırın ve kartı takın</string>
+    <string name="emv_confirm_card_no">Kart numarasını onayla</string>
+    <string name="emv_confirm_cert">Sertifika bilgilerini onaylayın</string>
+    <string name="emv_card_no_error">Kart bilgisi hatası alın</string>
+    <string name="emv_app_select">Lütfen uygulamayı seçin</string>
+    <string name="emv_ic_process">NFC/IC İşlemi</string>
+    <string name="emv_mag_process">Manyetik Süreç</string>
+    <string name="emv_read_rupay_card">Rupay kartı oku</string>
+    <string name="emv_other">EMV işlemleri</string>
+    <string name="emv_query_ec_balance">Sorgu ECBalance</string>
+    <string name="emv_remove_card">Lütfen kartı çıkarın&#8230;</string>
+
+    <string name="card_sector">Sektor (0&#8211;15)</string>
+    <string name="card_block">Engellemek (0&#8211;2)</string>
+    <string name="card_key_A">AnahtarA</string>
+    <string name="card_key_B">Anahtar B</string>
+    <string name="card_block_0">Blok0</string>
+    <string name="card_block_1">Blok1</string>
+    <string name="card_block_2">Blok2</string>
+    <string name="card_balance_symbol">Denge:</string>
+    <string name="card_cost">Maliyet</string>
+    <string name="card_read">Okumak</string>
+    <string name="card_write">Yazmak</string>
+    <string name="card_init">İçinde</string>
+    <string name="card_balance">Denge</string>
+    <string name="card_value_add">Eklemek</string>
+    <string name="card_value_reduce">Azaltmak</string>
+    <string name="card_value_restore">Onarmak</string>
+    <string name="card_sector_hint">Lütfen doğru sektörü girin(0&#8211;15)</string>
+    <string name="card_block_hint">Lütfen doğru bloğu girin(0&#8211;2)</string>
+    <string name="card_key_hint">Lütfen doğru anahtarı girin</string>
+    <string name="card_cost_hint">Lütfen doğru maliyet tutarını girin</string>
+    <string name="card_auth_success">Yetkilendirme başarısı</string>
+    <string name="card_auth_fail">Yetkilendirme başarısız</string>
+    <string name="card_wallet_init_success">Init wallet format başarısı</string>
+    <string name="card_wallet_init_fail">Init cüzdan formatı başarısız</string>
+    <string name="card_wallet_balance_success">Cüzdan bakiyesi başarısı elde edin</string>
+    <string name="card_wallet_balance_fail">Cüzdan bakiyesi alınamadı</string>
+    <string name="card_wallet_add_value_success">Cüzdan değeri başarısını artırın</string>
+    <string name="card_wallet_add_value_fail">Cüzdan değerini artırma başarısız</string>
+    <string name="card_wallet_dec_value_success">Cüzdan değeri başarısını azaltın</string>
+    <string name="card_wallet_dec_value_fail">Cüzdan değerini düşürme başarısız</string>
+
+    <string name="basic_get_sys_param">Sistem parametrelerini al</string>
+    <string name="basic_set_sys_param">Sistem parametrelerini ayarla</string>
+    <string name="basic_buzzer">Zil</string>
+    <string name="basic_led">LED lamba kontrolü</string>
+    <string name="basic_led_rb_on_new">Kırmızı/Mavi açık(Yeni)</string>
+    <string name="basic_led_yg_on_new">Sarı/Yeşil açık(Yeni)</string>
+    <string name="basic_led_all_on_new">Hepsi açık(Yeni)</string>
+    <string name="basic_led_all_off_new">Hepsi kapalı(Yeni)</string>
+    <string name="basic_screen_mode">Ekrana özel ayarla</string>
+
+
+</resources>

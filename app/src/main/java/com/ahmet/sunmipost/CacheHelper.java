@@ -7,7 +7,7 @@ import com.ahmet.sunmipost.utils.Constant;
 
 public class CacheHelper {
 
-    private static final String PREFERENCE_FILE_NAME = "sm_pay_demo_obj";
+    private static final String PREFERENCE_FILE_NAME = "com.ahmet.sunmipost";
 
     private static final String KEY_LANGUAGE = "key_language";
 

@@ -21,6 +21,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SunmiPost">
+        <activity android:name=".other.SetTimeDatweActivity"></activity>
+        <activity android:name=".basic.LedActivity" />
+        <activity android:name=".basic.BasicActivity" />
+        <activity android:name=".readCard.ICActivity" />
+        <activity android:name=".other.ESignatureActivity" />
+        <activity android:name=".other.LanguageActivity" />
+        <activity android:name=".other.OtherActivity" />
         <activity
             android:name=".process.ICProcessActivity"
             android:exported="true" />

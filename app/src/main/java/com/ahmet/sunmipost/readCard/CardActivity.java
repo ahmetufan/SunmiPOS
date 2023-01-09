@@ -32,6 +32,11 @@ public class CardActivity extends BaseAppCompatActivity {
         leftText = view.findViewById(R.id.magneticTextview);
         view.setOnClickListener(this);
         leftText.setText(R.string.card_test_mag);
+
+        view = findViewById(R.id.iCCardConstraint);
+        leftText = view.findViewById(R.id.iCCardTextview);
+        view.setOnClickListener(this);
+        leftText.setText(R.string.card_test_ic);
     }
 
     @Override
@@ -46,6 +51,10 @@ public class CardActivity extends BaseAppCompatActivity {
 
             case R.id.magneticConstraint:
                 openActivity(MagneticActivity.class);
+                break;
+
+            case R.id.iCCardConstraint:
+                openActivity(ICActivity.class);
                 break;
         }
     }
