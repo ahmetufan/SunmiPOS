@@ -52,7 +52,7 @@ public class OtherActivity extends BaseAppCompatActivity {
                 break;
 
             case R.id.e_signatureConstraint:
-                openActivity(ESignatureActivity.class);
+//                openActivity(ESignatureActivity.class);
                 break;
 
             case R.id.setDateTimeConstraint:

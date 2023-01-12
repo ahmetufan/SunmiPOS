@@ -15,6 +15,9 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import com.ahmet.sunmipost.utils.BluetoothUtil;
+import com.ahmet.sunmipost.utils.ESCUtil;
+import com.ahmet.sunmipost.utils.SunmiPrintHelper;
 import com.ahmet.sunmipost.view.LoadingDialog;
 import com.ahmet.sunmipost.view.SwingCardHintDialog;
 import com.sunmi.pay.hardware.aidlv2.AidlErrorCodeV2;
@@ -31,6 +34,16 @@ public abstract class BaseAppCompatActivity extends AppCompatActivity implements
         super.onCreate(savedInstanceState);
         setStatusBarColor();
         MyApplication.initLocaleLanguage();
+
+        initPrinterStyle();
+    }
+
+    private void initPrinterStyle() {
+        if(BluetoothUtil.isBlueToothPrinter){
+            BluetoothUtil.sendData(ESCUtil.init_printer());
+        }else{
+            SunmiPrintHelper.getInstance().initPrinter();
+        }
     }
 
     public void setStatusBarColor() {

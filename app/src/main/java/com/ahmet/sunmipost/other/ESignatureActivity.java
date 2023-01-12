@@ -1,3 +1,4 @@
+/*
 package com.ahmet.sunmipost.other;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -107,4 +108,4 @@ public class ESignatureActivity extends BaseAppCompatActivity {
     };
 
 
-}
+}*/

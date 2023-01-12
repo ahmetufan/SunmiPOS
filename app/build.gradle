@@ -75,7 +75,10 @@ dependencies {
 
 
     implementation 'com.sunmi:sunmiui:1.1.27'
-    implementation 'com.sunmi:printerlibrary:1.0.7'
+    implementation 'com.sunmi:printerlibrary:1.0.18'
+
+    //zxing to generate barcode
+//    implementation files('libs/core-3.3.0.jar')
 
 
 }

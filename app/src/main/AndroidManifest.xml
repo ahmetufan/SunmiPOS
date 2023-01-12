@@ -3,15 +3,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.ahmet.sunmipost">
 
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
     <uses-permission android:name="com.sunmi.perm.LED" />
     <uses-permission android:name="com.sunmi.perm.MSR" />
     <uses-permission android:name="com.sunmi.perm.ICC" />
     <uses-permission android:name="com.sunmi.perm.PINPAD" />
     <uses-permission android:name="com.sunmi.perm.SECURITY" />
     <uses-permission android:name="com.sunmi.perm.CONTACTLESS_CARD" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission
         android:name="android.permission.SET_TIME"
         tools:ignore="ProtectedPermissions" />
+
+    <!-- To support printerlibrary on Android R -->
+    <queries>
+        <package android:name="woyou.aidlservice.jiuiv5" />
+    </queries>
 
     <application
         android:name=".MyApplication"
@@ -21,11 +28,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SunmiPost">
-        <activity android:name=".other.SetTimeDatweActivity"></activity>
+        <activity
+            android:name=".print.PrintText2Activity"
+            android:exported="true" />
+        <activity android:name=".other.SetTimeDatweActivity" />
         <activity android:name=".basic.LedActivity" />
         <activity android:name=".basic.BasicActivity" />
         <activity android:name=".readCard.ICActivity" />
-        <activity android:name=".other.ESignatureActivity" />
+<!--        <activity android:name=".other.ESignatureActivity" />-->
         <activity android:name=".other.LanguageActivity" />
         <activity android:name=".other.OtherActivity" />
         <activity

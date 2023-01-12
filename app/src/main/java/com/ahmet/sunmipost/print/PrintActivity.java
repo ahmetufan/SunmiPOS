@@ -27,6 +27,13 @@ public class PrintActivity extends BaseAppCompatActivity {
         TextView leftText = view.findViewById(R.id.printTextTextview);
         view.setOnClickListener(this);
         leftText.setText(R.string.print_text);
+
+        view = findViewById(R.id.printText2Constraint);
+        leftText = view.findViewById(R.id.printText2Textview);
+        view.setOnClickListener(this);
+        leftText.setText(R.string.print_text_2);
+
+
     }
 
     @Override
@@ -35,6 +42,10 @@ public class PrintActivity extends BaseAppCompatActivity {
         switch (view.getId()) {
             case R.id.printTextConstraint:
                 openActivity(PrintTextActivity.class);
+                break;
+
+            case R.id.printText2Constraint:
+                openActivity(PrintText2Activity.class);
                 break;
         }
     }

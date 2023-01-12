@@ -200,7 +200,7 @@ public class SystemDateTime {
     }
 
     public static String getMMDD() {
-        SimpleDateFormat date = new SimpleDateFormat("MMdd");
+        SimpleDateFormat date = new SimpleDateFormat("MM/dd");
         Date curDate = new Date(System.currentTimeMillis());//şimdiki zamanı al
         String strDate = date.format(curDate);
         return strDate;
@@ -214,7 +214,7 @@ public class SystemDateTime {
     }
 
     public static String getHHmmss() {
-        SimpleDateFormat time = new SimpleDateFormat("HHmmss");
+        SimpleDateFormat time = new SimpleDateFormat("HH:mm:ss");
         Date curDate = new Date(System.currentTimeMillis());//  şimdiki zamanı al
         String strTime = time.format(curDate);
         return strTime;
@@ -222,7 +222,7 @@ public class SystemDateTime {
 
     public static String getCurrentTime(long stamp) {
         try {
-            SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMddHHmmss");
+            SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd/HH/mm/ss");
             String sd = sdf.format(new Date(Long.parseLong(String.valueOf(stamp))));
             return sd;
         } catch (Exception e) {

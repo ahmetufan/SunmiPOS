@@ -6,6 +6,9 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Matrix;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -18,11 +21,15 @@ import android.widget.EditText;
 import com.ahmet.sunmipost.BaseAppCompatActivity;
 import com.ahmet.sunmipost.MyApplication;
 import com.ahmet.sunmipost.R;
+import com.ahmet.sunmipost.utils.BitmapUtils;
 import com.ahmet.sunmipost.utils.Constant;
+import com.ahmet.sunmipost.utils.ESCUtil;
 import com.ahmet.sunmipost.utils.LogUtil;
 import com.ahmet.sunmipost.utils.SystemDateTime;
-import com.sunmi.peripheral.printer.InnerResultCallbcak;
+import com.sunmi.peripheral.printer.InnerResultCallback;
 import com.sunmi.peripheral.printer.SunmiPrinterService;
+
+import static com.ahmet.sunmipost.utils.ESCUtil.ESC;
 
 public class PrintTextActivity extends BaseAppCompatActivity {
 
@@ -33,6 +40,7 @@ public class PrintTextActivity extends BaseAppCompatActivity {
     private EditText edtIntervalTime;
     private Button btnPrint;
     private ScreenOnOffReceiver receiver;
+    Bitmap bitmap1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +52,22 @@ public class PrintTextActivity extends BaseAppCompatActivity {
         sunmiPrinterService = MyApplication.sunmiPrinterService;
 
         initView();
+
+
+    }
+
+    private Bitmap scaleImage(Bitmap bitmap1) {
+        int width = bitmap1.getWidth();
+        int height = bitmap1.getHeight();
+        // 设置想要的大小
+        int newWidth = (width / 8 + 1) * 8;
+        // 计算缩放比例
+        float scaleWidth = ((float) newWidth) / width;
+        // 取得想要缩放的matrix参数
+        Matrix matrix = new Matrix();
+        matrix.postScale(scaleWidth, 1);
+        // 得到新的图片
+        return Bitmap.createBitmap(bitmap1, 0, 0, width, height, matrix, true);
     }
 
     private void initView() {
@@ -51,13 +75,23 @@ public class PrintTextActivity extends BaseAppCompatActivity {
         btnPrint.setOnClickListener(this);
         etText = findViewById(R.id.et_text);
         etTextSize = findViewById(R.id.et_text_size);
-        etTextSize.setText("30");
+        etTextSize.setText("22");
         etText.setVisibility(View.GONE);
         edtRepeatCount = findViewById(R.id.edt_repeat_count);
         edtWaitTime = findViewById(R.id.edt_wait_time);
         edtIntervalTime = findViewById(R.id.edt_interval_time);
 //        etText.setText(R.string.text_mock);
         findViewById(R.id.btn_screen_off_print).setOnClickListener(this);
+
+        BitmapFactory.Options options = new BitmapFactory.Options();
+        options.inTargetDensity = 160;
+        options.inDensity = 160;
+
+        if (bitmap1 == null) {
+            bitmap1 = BitmapFactory.decodeResource(getResources(), R.drawable.vbtt, options);
+            bitmap1 = scaleImage(bitmap1);
+        }
+
     }
 
     @Override
@@ -87,16 +121,46 @@ public class PrintTextActivity extends BaseAppCompatActivity {
             setHeight(0x12);
             String hHmmss = SystemDateTime.getHHmmss();
             sunmiPrinterService.enterPrinterBuffer(true);
-            sunmiPrinterService.printTextWithFont(hHmmss + "\n", "", textSize, innerResultCallbcak);
 
-            for (int i = 0; i < repeatCount; i++) {
-                sunmiPrinterService.printTextWithFont(getString(R.string.text_mock1) + "\n", "", textSize, innerResultCallbcak);  //  print to text ------------------------
-            }
+
+            sunmiPrinterService.setAlignment(1, innerResultCallbcak);       //  Ortalama  ==>   0 ->left, 1 ->center, 2 ->right.
+
+            sunmiPrinterService.printTextWithFont(SystemDateTime.getMMDD() + "/" + SystemDateTime.getYYYY() + " - " + hHmmss +
+                    "\n", "", 20, innerResultCallbcak);
+            sunmiPrinterService.printTextWithFont("SHELL-CEVİZLİBAĞ\n", "", 20, innerResultCallbcak);
+            sunmiPrinterService.printTextWithFont("MERKEZEFENDİ MAH. E-5 KARAYOLU ÜZERİ LONDRA ASFALTI NO:5 ZEYTİNBURNU 34010\n", "", 20, innerResultCallbcak);
+            sunmiPrinterService.printTextWithFont("İSTANBUL\n\n", "", 20, innerResultCallbcak);
+
+            sunmiPrinterService.printTextWithFont("SHELL PETROL A.Ş.\n", "", 20, innerResultCallbcak);
+            sunmiPrinterService.printColumnsString(new String[]{"İ:986700", "T:03159456 \n"}, new int[]{1, 1}, new int[]{1, 1}, innerResultCallbcak);
+
+
+            sunmiPrinterService.sendRAWData(new byte[]{0x1b, 0x45, 0x1}, innerResultCallbcak); //  Font Bold  - UnBold -> 0x1b, 0x45, 0x0       FONT    BOLD
+            sunmiPrinterService.printTextWithFont("K. N. : ************ 8541 \n", "", 23, innerResultCallbcak);
+            sunmiPrinterService.printTextWithFont("VBT YAZILIM \n", "", 24, innerResultCallbcak);
+            sunmiPrinterService.printColumnsString(new String[]{"100,00 TL "}, new int[]{1}, new int[]{2}, innerResultCallbcak);
+            sunmiPrinterService.sendRAWData(new byte[]{0x1b, 0x45, 0x0}, innerResultCallbcak); //  Font Bold  - UnBold -> 0x1b, 0x45, 0x0       FONT    UN BOLD
+
+
+            sunmiPrinterService.printTextWithFont("================================\n", "", 24, innerResultCallbcak);
+            sunmiPrinterService.printTextWithFont("VBT YAZILIM POS PRİNTER DENEME . KPAY ÖDEME SİSTEMLERİ \n", "", 20, innerResultCallbcak);
+            sunmiPrinterService.printTextWithFont("================================\n", "", 24, innerResultCallbcak);
+            sunmiPrinterService.printBitmap(bitmap1, innerResultCallbcak);
+
+
             sunmiPrinterService.exitPrinterBufferWithCallback(true, innerResultCallbcak);
 
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    public static byte[] boldOn() {
+        byte[] result = new byte[3];
+        result[0] = ESC;
+        result[1] = 69;
+        result[2] = 0xF;
+        return result;
     }
 
     private void onScreenOffPrintClick() {
@@ -126,15 +190,15 @@ public class PrintTextActivity extends BaseAppCompatActivity {
 
     private boolean is = true;
 
-    private InnerResultCallbcak innerResultCallbcak = new InnerResultCallbcak() {
+    private InnerResultCallback innerResultCallbcak = new InnerResultCallback() {
 
         @Override
         public void onRunResult(boolean isSuccess) throws RemoteException {
             LogUtil.e("lxy", "isSuccess:" + isSuccess);
             if (is) {
                 try {
-                    sunmiPrinterService.printTextWithFont(SystemDateTime.getHHmmss() + "\n", "", 30, innerResultCallbcak);
-                    sunmiPrinterService.lineWrap(6, innerResultCallbcak);
+
+                    sunmiPrinterService.lineWrap(5, innerResultCallbcak);
                     is = false;
                 } catch (RemoteException e) {
                     e.printStackTrace();
@@ -175,7 +239,9 @@ public class PrintTextActivity extends BaseAppCompatActivity {
         }
     }
 
-    /**      Ekran dışı yayın        */
+    /**
+     * Ekran dışı yayın
+     */
 
     private class ScreenOnOffReceiver extends BroadcastReceiver {
         private int waitTime;
@@ -201,18 +267,6 @@ public class PrintTextActivity extends BaseAppCompatActivity {
             }
         }
     }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 }
